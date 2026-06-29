@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1><i class="fa-solid fa-cloud-sun"></i> Weather Dashboard</h1>
+
+<div class="top-bar">
+
+<div class="search-box">
+    <input type="text" id="city" placeholder="Enter City Name">
+
+    <button onclick="getWeather()">
+        🔍 Search
+    </button>
+
+    <button onclick="getLocation()" class="location-btn">
+        📍 My Location
+    </button>
+</div>
+<div class="unit-toggle">
+    <button id="cBtn" onclick="changeUnit('metric')">°C</button>
+    <button id="fBtn" onclick="changeUnit('imperial')">°F</button>
+</div>
+<div class="time-box">
+<h3 id="day">Monday</h3>
+<h2 id="time">10:30 PM</h2>
+</div>
+
+</div>
+
+
+<div class="main-weather">
+<h2 id="greeting"></h2>
+<img id="icon" src="" alt="Weather">
+
+<h2 id="cityName">City</h2>
+
+<h1 id="temp">--°C</h1>
+
+<h3 id="condition">Condition</h3>
+
+</div>
+
+
+<div class="weather-grid">
+
+<div class="card">
+<h3>💧 Humidity</h3>
+<p id="humidity">--%</p>
+</div>
+
+<div class="card">
+<h3>🌬 Wind</h3>
+<p id="wind">-- km/h</p>
+</div>
+
+<div class="card">
+<h3>🌡 Feels Like</h3>
+<p id="feels">--°C</p>
+</div>
+
+<div class="card">
+<h3>👁 Visibility</h3>
+<p id="visibility">-- km</p>
+</div>
+
+<div class="card">
+<h3>🌅 Sunrise</h3>
+<p id="sunrise">--:--</p>
+</div>
+
+<div class="card">
+<h3>🌇 Sunset</h3>
+<p id="sunset">--:--</p>
+</div>
+
+<div class="card">
+<h3>🌍 Country</h3>
+<p id="country">--</p>
+</div>
+
+<div class="card">
+<h3>🌡 Pressure</h3>
+<p id="pressure">-- hPa</p>
+</div>
+
+</div>
+
+
+<h2 class="section-title">5 Day Forecast</h2>
+
+<div id="forecast" class="forecast-grid">
+
+<div class="forecast-card">
+<p>Mon</p>
+<img src="" alt="">
+<h3>--°</h3>
+</div>
+
+<div class="forecast-card">
+<p>Tue</p>
+<img src="" alt="">
+<h3>--°</h3>
+</div>
+
+<div class="forecast-card">
+<p>Wed</p>
+<img src="" alt="">
+<h3>--°</h3>
+</div>
+
+<div class="forecast-card">
+<p>Thu</p>
+<img src="" alt="">
+<h3>--°</h3>
+</div>
+
+<div class="forecast-card">
+<p>Fri</p>
+<img src="" alt="">
+<h3>--°</h3>
+</div>
+
+</div>
+<div class="chart-box">
+
+    <h2>📈 Temperature Trend</h2>
+
+    <canvas id="tempChart"></canvas>
+
+</div>
+
+<div class="bottom-section">
+
+<div class="tips">
+
+<h2>💡 Weather Tip</h2>
+
+<p id="tip">
+Search a city to get weather advice.
+</p>
+
+</div>
+
+
+<div class="history">
+
+    <h2>🕘 Recent Searches</h2>
+
+    <ul id="historyList"></ul>
+
+</div>
+
+
+<footer>
+
+Developed by <b>Monika</b> |
+Thiranex Internship Task 4
+
+</footer>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

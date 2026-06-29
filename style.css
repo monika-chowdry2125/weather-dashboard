@@ -9,7 +9,7 @@ body{
     min-height:100vh;
     padding:40px;
 
-    background:url("images/bg.jpg") no-repeat center center;
+    background:url("bg.jpg") no-repeat center center;
     background-size:cover;
     background-attachment:fixed;
 }
